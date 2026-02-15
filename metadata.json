@@ -1,0 +1,7 @@
+{
+  "name": "Archi-Tek Portfolio",
+  "description": "A high-end architectural firm portfolio featuring brutalist minimalism, dynamic typography with video masks, and immersive project showcases.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
