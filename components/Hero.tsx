@@ -3,89 +3,73 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-bg-dark">
-      {/* Immersive Background Video/Image Layer */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Drone video playing behind the text with heavy filtering */}
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="w-full h-full object-cover grayscale opacity-20 scale-110"
-          style={{ filter: 'contrast(1.2) brightness(0.5)' }}
-        >
-          <source 
-            src="https://assets.mixkit.co/videos/preview/mixkit-drone-view-of-a-modern-city-at-night-23304-large.mp4" 
-            type="video/mp4" 
-          />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-bg-dark/80 via-transparent to-bg-dark"></div>
+    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black font-sans">
+      {/* Background Image Layer with High Contrast Architectural Grid */}
+      <div className="absolute inset-0 z-0 opacity-40">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+          alt="Architectural Grid"
+          className="w-full h-full object-cover grayscale brightness-[0.3]"
+        />
+        {/* Subtle overlay to enhance contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
       </div>
 
       <div className="relative z-10 text-center px-4 w-full flex flex-col items-center">
-        <p className="text-primary font-bold tracking-[0.8em] text-[10px] md:text-xs uppercase mb-16 opacity-90 animate-pulse">
-          STRUCTURAL PRECISION — LONDON / NYC / TOKYO
+        {/* Established Subtitle */}
+        <p className="text-primary font-bold tracking-ultra text-[10px] md:text-xs uppercase mb-12 font-heading">
+          ESTABLISHED 1998 — LONDON / NYC / TOKYO
         </p>
-        
-        {/* Simplified White Typography with Dynamic Shimmer Effect */}
-        <div className="relative group">
-          <h1 className="text-[14vw] md:text-[16vw] font-black uppercase leading-[0.8] tracking-tighter select-none text-white mix-blend-difference relative">
+
+        {/* Massive ARCHI-TEK Title */}
+        <div className="relative mb-12">
+          <h1 className="text-[12vw] md:text-[14vw] font-black uppercase leading-[0.8] tracking-tighter text-white font-sans animate-fade-in">
             ARCHI-TEK
-            
-            {/* Shimmer / Scanline effect overlay */}
-            <span className="absolute inset-0 overflow-hidden pointer-events-none">
-              <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] animate-[shimmer_4s_infinite_linear]"></span>
-            </span>
           </h1>
-          
-          {/* Subtle Ghosting / Depth Effect */}
-          <div className="absolute -inset-1 opacity-10 blur-xl bg-white group-hover:opacity-20 transition-opacity duration-1000 -z-10"></div>
         </div>
 
-        <div className="mt-12 max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-3xl font-light text-white/60 tracking-tight leading-relaxed max-w-2xl mx-auto">
-            Defining the future through <span className="text-white font-medium border-b border-primary/40">radical minimalism</span> and structural integrity.
+        {/* Description Subtitle */}
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-lg md:text-2xl font-light text-white/50 tracking-tight leading-relaxed max-w-2xl mx-auto">
+            Defining the future through <span className="text-white font-medium">structural precision</span> and radical minimalism.
           </h2>
         </div>
       </div>
 
-      {/* Decorative Metadata */}
-      <div className="absolute bottom-12 left-12 hidden lg:block">
-        <div className="flex flex-col gap-1.5 font-mono text-[9px] text-white/40 uppercase tracking-tighter">
-          <p className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span> SYSTEM: ONLINE</p>
+      {/* Decorative Metadata (Left) */}
+      <div className="absolute bottom-12 left-12 hidden lg:block font-mono text-[9px] text-white/30 uppercase tracking-widest">
+        <div className="flex flex-col gap-1.5">
           <p>LAT: 51.5074° N</p>
           <p>LONG: 0.1278° W</p>
-          <p className="text-primary/70 mt-2 font-bold tracking-widest">REF: AT-2024-CORE</p>
+          <p>PRECISION: 99.998%</p>
+          <p className="text-primary/60 mt-3 font-bold border-t border-white/10 pt-1">REF: AT-2024-CORE</p>
         </div>
       </div>
 
+      {/* Scroll Indicator (Center) */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        <div className="w-[1px] h-32 bg-gradient-to-b from-primary/80 to-transparent"></div>
+      </div>
+
+      {/* Explore Metadata (Right) */}
       <div className="absolute bottom-12 right-12 hidden lg:block">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-[1px] bg-white/20"></div>
-          <p className="text-[10px] uppercase tracking-[0.5em] text-white/50">Explore Vision</p>
+          <div className="w-12 h-[1px] bg-white/20"></div>
+          <p className="text-[10px] uppercase tracking-[0.5em] text-white/40 font-bold">Scroll to explore</p>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6">
-        <div className="w-[1px] h-24 bg-gradient-to-b from-primary via-primary/20 to-transparent animate-[scrollLine_2s_infinite]"></div>
-      </div>
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes shimmer {
-          0% { transform: translateX(-200%) skewX(-12deg); }
-          100% { transform: translateX(300%) skewX(-12deg); }
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes scrollLine {
-          0% { transform: scaleY(0); transform-origin: top; }
-          50% { transform: scaleY(1); transform-origin: top; }
-          51% { transform: scaleY(1); transform-origin: bottom; }
-          100% { transform: scaleY(0); transform-origin: bottom; }
+        .animate-fade-in {
+          animation: fade-in 1.5s ease-out forwards;
         }
       `}} />
     </section>
   );
 };
-
 export default Hero;
