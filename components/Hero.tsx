@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Description */}
-        <div className="max-w-3xl mx-auto relative z-20">
+        <div className="max-w-3xl mx-auto relative z-20 mb-20">
           <h2 className="text-lg md:text-2xl font-light text-white/50 tracking-tight leading-relaxed max-w-2xl mx-auto italic">
             Defining the future through <span className="text-white font-medium not-italic">structural precision</span> and radical minimalism.
           </h2>
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
 
       {/* Scroll Indicator (Center) */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
-        <div className="w-[1px] h-32 bg-gradient-to-b from-primary/80 to-transparent"></div>
+        <div className="w-[1px] h-16 bg-gradient-to-b from-primary/80 to-transparent"></div>
       </div>
 
       {/* Explore Metadata (Right) */}
