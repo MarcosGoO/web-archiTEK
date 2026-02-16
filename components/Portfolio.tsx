@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Portfolio: React.FC = () => {
   const projects = [
@@ -36,9 +37,9 @@ const Portfolio: React.FC = () => {
           <h2 className="text-[10px] font-bold uppercase tracking-[0.5em] text-primary mb-6 font-heading">Portfolio</h2>
           <h3 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter">Selected Works</h3>
         </div>
-        <button className="text-[10px] font-bold uppercase tracking-widest border-b border-primary pb-3 hover:text-primary transition-all">
+        <Link to="/portfolio" className="text-[10px] font-bold uppercase tracking-widest border-b border-primary pb-3 text-white hover:text-primary transition-all">
           View All Projects
-        </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[1200px] max-w-[1400px] mx-auto">

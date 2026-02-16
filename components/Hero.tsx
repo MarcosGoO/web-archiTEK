@@ -21,15 +21,81 @@ const Hero: React.FC = () => {
           ESTABLISHED 1998 — LONDON / NYC / TOKYO
         </p>
 
-        {/* Massive ARCHI-TEK Title */}
-        <div className="relative mb-12">
-          <h1 className="text-[12vw] md:text-[14vw] font-black uppercase leading-[0.8] tracking-tighter text-white font-sans animate-fade-in">
-            ARCHI-TEK
-          </h1>
+        {/* Massive ARCHI-TEK Title with Video Mask */}
+        <div className="relative w-full max-w-[90vw] h-[15vw] md:h-[12vw] flex items-center justify-center mb-12">
+          {/* SVG Mask Definition */}
+          <svg className="absolute w-0 h-0">
+            <defs>
+              <clipPath id="textMask" clipPathUnits="objectBoundingBox">
+                {/* Approximate path for "ARCHI-TEK" - using an image or text is better, 
+                    but for complexity we can use a foreignObject or simply CSS background-clip if supported.
+                    Since we want deep impact, we'll use CSS background-clip: text with a video background.
+                */}
+              </clipPath>
+            </defs>
+          </svg>
+
+          <div className="relative w-full h-full flex items-center justify-center">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-0"
+            >
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-drone-view-of-a-modern-city-at-night-23304-large.mp4" type="video/mp4" />
+            </video>
+
+            <h1 className="text-[12vw] md:text-[14vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text bg-no-repeat bg-cover bg-center animate-fade-in select-none"
+              style={{
+                backgroundImage: 'url("https://assets.mixkit.co/videos/preview/mixkit-drone-view-of-a-modern-city-at-night-23304-large.mp4")',
+                WebkitBackgroundClip: 'text',
+                backgroundColor: 'white', // Fallback
+              }}
+            >
+              ARCHI-TEK
+            </h1>
+
+            {/* Real Video Layer for the mask effect */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <h1 className="text-[12vw] md:text-[14vw] font-black uppercase leading-none tracking-tighter text-transparent bg-clip-text select-none z-20"
+                style={{ WebkitBackgroundClip: 'text' }}>
+                ARCHI-TEK
+              </h1>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover z-10"
+                style={{ clipPath: 'url(#textMask)' }} // We will use a simpler approach below for better compatibility
+              >
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-drone-view-of-a-modern-city-at-night-23304-large.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        {/* Refined approach for video mask using mix-blend-mode */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center overflow-hidden pointer-events-none mb-12">
+          <div className="relative w-full h-full flex items-center justify-center bg-black">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute w-full h-full object-cover opacity-60"
+            >
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-architectural-drone-shot-of-a-modern-building-42358-large.mp4" type="video/mp4" />
+            </video>
+            <h1 className="text-[12vw] md:text-[14vw] font-black uppercase leading-none tracking-tighter text-black bg-white w-full h-full flex items-center justify-center mix-blend-multiply select-none font-sans">
+              ARCHI-TEK
+            </h1>
+          </div>
         </div>
 
         {/* Description Subtitle */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto mt-[12vw] relative z-20">
           <h2 className="text-lg md:text-2xl font-light text-white/50 tracking-tight leading-relaxed max-w-2xl mx-auto">
             Defining the future through <span className="text-white font-medium">structural precision</span> and radical minimalism.
           </h2>

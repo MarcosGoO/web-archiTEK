@@ -7,6 +7,9 @@ import Studio from './components/Studio';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 
+import { Routes, Route } from 'react-router-dom';
+import PortfolioPage from './components/PortfolioPage';
+
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,14 +22,19 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-bg-dark">
+    <div className="min-h-screen bg-black">
       <Navbar scrolled={scrolled} />
-      <main>
-        <Hero />
-        <Stats />
-        <Studio />
-        <Portfolio />
-      </main>
+      <Routes>
+        <Route path="/" element={
+          <main>
+            <Hero />
+            <Stats />
+            <Studio />
+            <Portfolio />
+          </main>
+        } />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+      </Routes>
       <Footer />
     </div>
   );
