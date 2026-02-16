@@ -14,7 +14,7 @@ const PortfolioPage: React.FC = () => {
         { title: "Urban Void", location: "Berlin", image: "https://images.unsplash.com/photo-1470723710355-95304d8aece4?q=80&w=2070&auto=format&fit=crop" },
         { title: "The Cube", location: "Dubai", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" },
         { title: "Glass Axis", location: "Singapore", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" },
-        { title: "Sky Garden", location: "London", image: "https://images.unsplash.com/photo-1542601039-35bb5adba3e7?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Sky Garden", location: "London", image: "components/041424_skytower_landinophoto_031.jpg" },
         { title: "Concrete Shell", location: "Mexico", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" },
         { title: "Linear Bridge", location: "Oslo", image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" },
         { title: "Void Library", location: "Seoul", image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop" },
