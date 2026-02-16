@@ -4,7 +4,7 @@
 
 Archi-Tek is a premium architectural portfolio website designed for high-impact studios. It features a high-contrast aesthetic, massive dynamic typography, and a seamless digital experience focused on form and substance.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **React 18**
 - **Vite** (Next-gen frontend tooling)
@@ -12,7 +12,7 @@ Archi-Tek is a premium architectural portfolio website designed for high-impact 
 - **React Router Dom** (Seamless SPA navigation)
 - **Lucide React** (Minimalist iconography)
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repository**
    ```bash
@@ -30,6 +30,6 @@ Archi-Tek is a premium architectural portfolio website designed for high-impact 
    npm run dev
    ```
 
-## 📐 Design Philosophy
+## Design Philosophy
 
 The project follows the "Archi-Tek" core philosophy: **Precision beyond 99.998%**. The interface uses a dark mode palette (#000000) with high-visibility accents (#FF5722) and structural metadata to emphasize the engineering behind the art.
