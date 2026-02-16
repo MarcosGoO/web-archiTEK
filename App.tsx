@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 
 import { Routes, Route } from 'react-router-dom';
 import PortfolioPage from './components/PortfolioPage';
+import RequestQuote from './components/RequestQuote';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           </main>
         } />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/request-quote" element={<RequestQuote />} />
       </Routes>
       <Footer />
     </div>

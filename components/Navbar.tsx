@@ -31,9 +31,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
         {/* Actions */}
         <div className="flex items-center gap-8 text-white">
-          <button className="hidden md:block text-[10px] font-bold uppercase tracking-widest border-b border-primary pb-0.5 hover:text-primary transition-all">
+          <Link to="/request-quote" className="hidden md:block text-[10px] font-bold uppercase tracking-widest border-b border-primary pb-0.5 hover:text-primary transition-all">
             Request Quote
-          </button>
+          </Link>
           <Link to="/portfolio" className="bg-primary hover:bg-white hover:text-black text-white px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300">
             View Portfolio
           </Link>

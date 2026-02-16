@@ -7,7 +7,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Monolith House",
       location: "Iceland",
-      image: "https://images.unsplash.com/photo-1518005020251-58296d8f8bca?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=2070&auto=format&fit=crop",
       span: "md:col-span-2 md:row-span-2"
     },
     {
@@ -19,7 +19,7 @@ const Portfolio: React.FC = () => {
     {
       title: "L-Pavilion",
       location: "Kyoto",
-      image: "https://images.unsplash.com/photo-1511149755252-b5cda5828865?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop",
       span: "md:col-span-1 md:row-span-1"
     },
     {
