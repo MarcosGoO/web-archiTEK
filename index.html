@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHI-TEK | Structural Precision</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF5722',
+                        'bg-dark': '#000000',
+                        'bg-card': '#111111',
+                        'text-muted': '#A0A0A0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Syncopate', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'mega': '0.5em',
+                        'ultra': '0.8em',
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        @layer base {
+            body {
+                @apply bg-bg-dark text-white selection:bg-primary selection:text-white;
+                overflow-x: hidden;
+            }
+        }
+
+        .glass {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ff5e1f;
+        }
+
+        /* Video Mask Container */
+        .video-mask-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-mask-svg {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./index.css">
+  <script type="module" crossorigin src="/web-archiTEK/assets/index-DXnFcW8Z.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
