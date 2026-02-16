@@ -1,3 +1,4 @@
+// Portfolio showcase page
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,12 +8,16 @@ const PortfolioPage: React.FC = () => {
     }, []);
 
     const allProjects = [
-        { title: "Monolith House", location: "Iceland", image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Monolith House", location: "Iceland", image: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=2070&auto=format&fit=crop" },
         { title: "Steel Core HQ", location: "Chicago", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" },
-        { title: "L-Pavilion", location: "Kyoto", image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=2070&auto=format&fit=crop" },
+        { title: "L-Pavilion", location: "Kyoto", image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop" },
         { title: "Urban Void", location: "Berlin", image: "https://images.unsplash.com/photo-1470723710355-95304d8aece4?q=80&w=2070&auto=format&fit=crop" },
         { title: "The Cube", location: "Dubai", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" },
-        { title: "Glass Axis", location: "Singapore", image: "https://images.unsplash.com/photo-1525438128494-3422be300994?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Glass Axis", location: "Singapore", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Sky Garden", location: "London", image: "https://images.unsplash.com/photo-1449156059431-787c1be1f926?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Concrete Shell", location: "Mexico", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Linear Bridge", location: "Oslo", image: "https://images.unsplash.com/photo-1493397212122-2b85def82c0b?q=80&w=2070&auto=format&fit=crop" },
+        { title: "Void Library", location: "Seoul", image: "https://images.unsplash.com/photo-1503387762-592eda58efad?q=80&w=2070&auto=format&fit=crop" },
     ];
 
     return (
@@ -25,7 +30,7 @@ const PortfolioPage: React.FC = () => {
                     </div>
                     <div className="hidden md:block text-right">
                         <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-2">Displaying</p>
-                        <p className="text-2xl font-black text-white">06 / 24</p>
+                        <p className="text-2xl font-black text-white">10 / 24</p>
                     </div>
                 </div>
 

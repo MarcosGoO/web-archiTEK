@@ -1,15 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import Studio from './components/Studio';
-import Portfolio from './components/Portfolio';
-import Footer from './components/Footer';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Stats from '@/components/Stats';
+import Studio from '@/components/Studio';
+import Portfolio from '@/components/Portfolio';
+import Footer from '@/components/Footer';
 
 import { Routes, Route } from 'react-router-dom';
-import PortfolioPage from './components/PortfolioPage';
-import RequestQuote from './components/RequestQuote';
+import PortfolioPage from '@/components/PortfolioPage';
+import RequestQuote from '@/components/RequestQuote';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

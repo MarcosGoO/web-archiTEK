@@ -19,26 +19,15 @@ const Hero: React.FC = () => {
           ESTABLISHED 1998 — LONDON / NYC / TOKYO
         </p>
 
-        {/* Massive ARCHI-TEK Title with Video Mask Effect */}
-        <div className="relative w-full max-w-[95vw] h-[20vw] md:h-[15vw] flex items-center justify-center mb-16 overflow-hidden">
-          {/* Video in the background of the mask layer */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-80"
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-architectural-drone-shot-of-a-modern-building-42358-large.mp4" type="video/mp4" />
-          </video>
-
-          {/* The Mask Overlay: Black background with White text + mix-blend-multiply */}
-          {/* This reveals the video only where the text is white */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black mix-blend-multiply">
-            <h1 className="text-[14vw] md:text-[16vw] font-black uppercase leading-none tracking-tighter text-white font-sans select-none text-center">
-              ARCHI-TEK
-            </h1>
-          </div>
+        {/* Massive ARCHI-TEK Title with Minimalist Shimmer */}
+        <div className="relative mb-16">
+          <h1 className="text-[14vw] md:text-[16vw] font-black uppercase leading-none tracking-tighter text-white font-sans animate-shimmer select-none text-center">
+            ARCHI-TEK
+          </h1>
+          {/* Subtle reflection overlay */}
+          <h1 className="absolute inset-0 text-[14vw] md:text-[16vw] font-black uppercase leading-none tracking-tighter text-white/5 font-sans select-none blur-xl translate-y-4">
+            ARCHI-TEK
+          </h1>
         </div>
 
         {/* Description */}
@@ -78,8 +67,16 @@ const Hero: React.FC = () => {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes shimmer {
+          0% { opacity: 0.8; }
+          50% { opacity: 1; filter: brightness(1.2); }
+          100% { opacity: 0.8; }
+        }
         .animate-fade-in {
           animation: fade-in 1.5s ease-out forwards;
+        }
+        .animate-shimmer {
+          animation: shimmer 4s ease-in-out infinite;
         }
       `}} />
     </section>

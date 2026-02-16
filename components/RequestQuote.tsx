@@ -1,3 +1,4 @@
+// Client inquiry form
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,9 +8,21 @@ const RequestQuote: React.FC = () => {
     }, []);
 
     const [formState, setFormState] = useState('idle');
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+
+    const validateEmail = (email: string) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if (!validateEmail(email)) {
+            setEmailError('Please enter a valid e-mail (xxx@domain.com)');
+            return;
+        }
+        setEmailError('');
         setFormState('sending');
         setTimeout(() => setFormState('success'), 1500);
     };
@@ -64,7 +77,18 @@ const RequestQuote: React.FC = () => {
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-[10px] font-bold uppercase tracking-widest text-white/30">Email Address</label>
-                                        <input required type="email" className="w-full bg-white/5 border border-white/10 px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors font-mono text-sm" placeholder="john@example.com" />
+                                        <input
+                                            required
+                                            type="email"
+                                            value={email}
+                                            onChange={(e) => {
+                                                setEmail(e.target.value);
+                                                if (emailError) setEmailError('');
+                                            }}
+                                            className={`w-full bg-white/5 border ${emailError ? 'border-primary' : 'border-white/10'} px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors font-mono text-sm`}
+                                            placeholder="john@example.com"
+                                        />
+                                        {emailError && <p className="text-[9px] text-primary uppercase tracking-widest mt-1">{emailError}</p>}
                                     </div>
                                 </div>
 

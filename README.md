@@ -1,21 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Archi-Tek
 
-# Run and deploy your AI Studio app
+### Structural Precision • Radical Minimalism • Future Environments
 
-This contains everything you need to run your app locally.
+Archi-Tek is a premium architectural portfolio website designed for high-impact studios. It features a high-contrast aesthetic, massive dynamic typography, and a seamless digital experience focused on form and substance.
 
-View your app in AI Studio: https://ai.studio/apps/drive/11dVJ0aeajim0h-b7kmPwgZaCbRhKNSit
+## 🛠️ Technology Stack
 
-## Run Locally
+- **React 18**
+- **Vite** (Next-gen frontend tooling)
+- **Tailwind CSS** (Utility-first styling with custom configurations)
+- **React Router Dom** (Seamless SPA navigation)
+- **Lucide React** (Minimalist iconography)
 
-**Prerequisites:**  Node.js
+## 🚀 Getting Started
 
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/archit-tek.git
+   cd archit-tek
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-# web-archiTEK
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Launch dev server**
+   ```bash
+   npm run dev
+   ```
+
+## 📐 Design Philosophy
+
+The project follows the "Archi-Tek" core philosophy: **Precision beyond 99.998%**. The interface uses a dark mode palette (#000000) with high-visibility accents (#FF5722) and structural metadata to emphasize the engineering behind the art.
